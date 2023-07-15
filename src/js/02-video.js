@@ -3,7 +3,7 @@ import throttle from 'lodash.throttle';
 
 const vimeoPlayer = new Player('vimeo-player');
 
-vimeoPlayer.on('timeupdate', throttle(saveCurrentTime, 500));
+vimeoPlayer.on('timeupdate', throttle(saveCurrentTime, 1000));
 
 function saveCurrentTime(event) {
   const currentTime = event.seconds;
